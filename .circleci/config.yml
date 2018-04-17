@@ -37,6 +37,6 @@ jobs:
       - run: npm run build
 
       # Move dist to artifact
-      -run:
+      - run:
         command: cp -r ~/repo/dist $CIRCLE_ARTIFACTS
 
