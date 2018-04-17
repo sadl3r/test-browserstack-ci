@@ -33,10 +33,10 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
+      # run build!
       - run: npm run build
 
-      # run tests!
-      - run: npm test
-
+      # Move dist to artifact
+      -run:
+        command: cp -r ~/repo/dist $CIRCLE_ARTIFACTS
 
