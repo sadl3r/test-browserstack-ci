@@ -38,5 +38,6 @@ jobs:
 
       # Move dist to artifact
       - run:
-          command: cp ~/repo/dist/* $CIRCLE_ARTIFACTS/
+          name: copy dist to artifact
+          command: sudo cp ~/repo/dist/* $CIRCLE_ARTIFACTS/
 
