@@ -34,6 +34,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run: npm run build
+
+      # run tests!
+      - run: npm test
 
 
